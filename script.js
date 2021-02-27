@@ -8,9 +8,9 @@ function showData(){
         document.getElementById("image").src=data.current.weather_icons
         
         console.log(data)
-        para1.innerHTML="    Temperature: "+data.current.temperature+"<br>"+"    Feels like: "+data.current.feelslike+"<br>";
+        para1.innerHTML="City: "+data.location.name+"<br>Temperature: "+data.current.temperature+"<sup>o</sup>C<br>"+"Feels like: "+data.current.feelslike+"<sup>o</sup>C<br>Humidity: "+data.current.humidity;
     }
-    fetch(url).then(response => response.json()).then(data =>def(data));
+    fetch(url).then(response => response.json()).then(data =>def(data)).catch(res => alert("CITY NOT FOUND!! PLEASE ENTER A VALID CITY"));
 
 }
 
