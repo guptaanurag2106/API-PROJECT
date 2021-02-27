@@ -2,22 +2,25 @@
 
 <html>
   <head>
-    <title>Color Game</title>
+    <title>API-PROJECT</title>
     <script type="text/javascript" src="script.js"></script>
     
   </head>
-  <body style="background-color:red">
-    
-    <input type="text" id ="city" name="city" value="Enter City"/>
-    
-    <button id="btn" onclick="showData()">Enter</button> 
-    <br>
+  <body style="background-image: url('background1.png'); background-size:1370px ;">
+    <h3> Get Live Weather Of Any City</h3>
+      <br> 
+    <input type="text" id ="city" placeholder="Enter City"/>
+    <button id="btn" onclick="showData()" style="background-color:cyan;">Enter</button> 
+    <br><br>
     <img src="" id="image" width="100px"/> 
-    
+   
+    <p id="data1"></p>
+
+    <br><br>
+    <h3> Get Top Headlines Of The Day</h3>
+    <button id="btn2" onclick="showNews()"  style="background-color:cyan; padding: 15px 32px;margin: 4px 2px;">Get Top Headlines</button>
      
-  
-   <p id="data"></p>
-   <p id="data1"></p>
+    <p id="data2"></p>
     
   </body>
 </html>
