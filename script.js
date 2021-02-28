@@ -1,6 +1,6 @@
 function showData(){
     var para1=document.getElementById("data1");
-    var site="http://api.weatherstack.com/current?access_key=896830f25ded7c18de3347fecaa9e17c&query=";
+    var site="http://api.weatherstack.com/current?access_key=YOUR-ACCESS-KEY&query=";
     var city=document.getElementById("city").value;
     var url=site.concat(city);
     var img;
@@ -16,7 +16,7 @@ function showData(){
 
 function showNews(){
     var para2=document.getElementById("data2");
-    var url2 = "http://api.mediastack.com/v1/news?access_key=cf71d5bda9c860845f8ad7488fef0abc&sources=cnn,bbc";
+    var url2 = "http://api.mediastack.com/v1/news?access_key=YOUR-ACCESS-KEY&sources=cnn,bbc";
     
     function def1(data1){
         console.log(data1)
