@@ -15,15 +15,17 @@ function showData(){
 }
 
 function showNews(){
-    
+    var no_of_headlines=15;
     var url2 = "http://api.mediastack.com/v1/news?access_key=YOUR-ACCESS-KEY&sources=cnn,bbc";
     
     function def1(data1){
         console.log(data1)
-        for (var i=0;i<15;i++){
-            document.getElementById(i).innerHTML=(i+1).toString()+".  "+data1.data[i].title+"<br><br>"
-            document.getElementById(i).href=data1.data[i].url;
+        for (var i=0;i<no_of_headlines;i++){
+	    var link=data1.data[i].url;
+	    var headline=(i+1).toString()+'.  '+data1.data[i].title+'<br><br>';
+	    document.getElementById("headlines").innerHTML+="<a href="+link+" target='_blank'>"+headline+"</a>";            
 	}
+         
     }
     fetch(url2)
         .then(response => response.json()).then(data1 => def1(data1))
